@@ -1,0 +1,42 @@
+#search {
+    display: inline;
+}
+
+body {
+    text-align: center;
+    padding: 20px;
+    background-color: bisque;
+}
+
+body>* {
+    margin-bottom: 20px;
+} 
+
+#weather-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+    grid-template-rows: repeat();
+    gap: 20px;
+}
+
+.item {
+    background-color: rgb(252, 219, 180);
+    border: 1px solid grey;
+    height: 200px;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 100%;
+    align-content: space-around;
+}
+
+.item>*{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.date, .low {
+    color: grey;
+}
