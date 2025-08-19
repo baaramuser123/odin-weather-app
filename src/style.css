@@ -28,11 +28,12 @@ body>* {
     border-radius: 1em;
     display: grid;
     grid-template-columns: 100%;
+    grid-template-rows: 1em 80px 1em ;
     align-content: space-around;
 }
 
 .item>*{
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     display: flex;
     justify-content: space-around;
 }

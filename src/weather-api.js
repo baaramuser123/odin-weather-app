@@ -15,12 +15,14 @@ async function getWeatherData(city){
         );
         console.log(rawWeatherData);
         const weatherData = await rawWeatherData.json();
+        console.log(weatherData);
         for(let i = 0; i < weatherData.days.length; i++){
             const date = weatherData.days[i].datetime;
             const condition = weatherData.days[i].conditions;
             const tempmax = weatherData.days[i].tempmax;
             const tempmin = weatherData.days[i].tempmin;
-            const day = new DayWeather(date, condition, tempmax, tempmin);
+            const icon = weatherData.days[i].icon;
+            const day = new DayWeather(date, condition, icon, tempmax, tempmin);
             weatherArray.push(day);
         }
         return weatherArray;
